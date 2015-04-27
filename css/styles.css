@@ -24,3 +24,8 @@
     position: fixed;
     top: 18px;
 }
+
+#main-tagline {
+    color: #f3f3f3;
+    text-shadow: 0px 0px 15px pink;
+}
