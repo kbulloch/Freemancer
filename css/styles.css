@@ -1,10 +1,26 @@
+.jumbotron {
+    background-image: url("../img/grass.jpg");
+    margin: none;
+    border-radius: none;
+    height: 700px;
+}
+
+.navbar-btn {
+    margin-top: 18px;
+}
+
 .btn-clear {
     background: none;
     border: none;
 }
 
+.navbar {
+    margin: 0;
+    height: 72px;
+}
+
 #nav_logo {
-    height: 33px;
+    height: 36px;
     position: fixed;
-    top: 10px;
+    top: 18px;
 }
