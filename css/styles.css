@@ -1,0 +1,10 @@
+.btn-clear {
+    background: none;
+    border: none;
+}
+
+#nav_logo {
+    height: 33px;
+    position: fixed;
+    top: 10px;
+}
