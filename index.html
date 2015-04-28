@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="freemancer">
 <head>
   <meta charset="utf-8">
   <title>Freemancer</title>
@@ -10,28 +10,63 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-left">
-        <a href="#" class="navbar-brand">
-          <img id="nav_logo" src="img/Freelancerlogo.png" alt="Freelancer logo">
-        </a>
-      </div>
-      <div class="navbar-right navbar-header">
-        <a href="#" class="btn btn-default navbar-btn btn-clear">LOGIN</a>
-        <a href="#" class="btn btn-default navbar-btn btn-clear">SIGN UP</a>
-        <a class="btn btn-warning navbar-btn">Post a Project</a>
-      </div>
-    </div>
-  </nav>
+  <navbar></navbar>
 
   <div class="jumbotron">
     <div class="container">
       <div class="row">
         <div class="col-sm-6">
           <h1 id="main-tagline">Today is the day you turn your ideas into reality.</h1>
+          <h4 id="main-subtagline">Millions of small businesses post their online jobs on Freelancer.com. Find an expert freelancer to bring your project to life!</h4>
+          <div class="main-tag-buttons">
+            <button id="hire" class="btn btn-default main-button" ng-click="hirebox = true">HIRE</button>
+            <button id="work" class="btn btn-default main-button">WORK</button>
+          </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <div ui-view></div>
+
+  <div class="hire-box" ng-show="hirebox">
+    <div class="container">
+    <span class="close" ng-click="hirebox = false">X</span>
+      <h3>Hire freemancers for a fraction of the sacrifice!</h3>
+      <div class="row three-options">
+        <div class="col-sm-4">
+          <img src="img/tree.png" alt="tree" class="three-option-img">
+          <p>
+            Post your sorcery in the blink of a goat's eye
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="img/water.png" alt="water" class="three-option-img">
+
+          <p>
+            Compare sacrifices and select bidders
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <img src="img/flame.png" alt="flame" class="three-option-img">
+          <p>
+            Sacrifice only once the darkness has receded
+          </p>
+        </div>
+      </div>
+      <form class="select-mancy">
+        <div class="form-group">
+          <select id="mancy-dropdown" class="form-control">
+            <option value="" disabled selected>Select your -mancy...</option>
+            <option value="pyro">Pyromancy</option>
+            <option value="pyro">Aquamancy</option>
+            <option value="pyro">Necromancy</option>
+            <option value="pyro">Photomancy</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-warning btn-xlg">Get sacrifing now</button>
+      </form>
+      <h5 class="hire-sub-tag"><a href="#">Looking for freemancing?</a></h5>
     </div>
   </div>
 
