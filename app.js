@@ -17,3 +17,9 @@ freemancer.directive("navbar", function() {
     templateUrl: "partials/navigation.html"
   }
 });
+
+freemancer.controller("FreemancerCtrl", function FreemancerCtrl($scope) {
+  $scope.toggleHirebox = function() {
+    $scope.hirebox = ! $scope.hirebox;
+  };
+});
