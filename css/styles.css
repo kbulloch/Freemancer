@@ -1,3 +1,7 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .jumbotron {
   background-image: url("../img/pyromancer-bg.jpg");
   background-size: 130%;
@@ -44,6 +48,7 @@
 }
 
 #main-tagline {
+  /*font-family: 'Tangerine', cursive;*/
   margin-top: 50px;
 }
 
