@@ -1,11 +1,17 @@
 var freemancer = angular.module("freemancer", ["ui.router"]);
 
 freemancer.config(function($stateProvider) {
-  $stateProvider.state("hirebox", {
+  $stateProvider.state("main", {
     url: "",
     views: {
+      "workbox": {
+        templateUrl: "partials/workbox.html"
+      },
       "hirebox": {
         templateUrl: "partials/hirebox.html"
+      },
+      "jumbotron": {
+        templateUrl: "partials/jumbotron.html"
       }
     }
   });
@@ -20,6 +26,10 @@ freemancer.directive("navbar", function() {
 
 freemancer.controller("FreemancerCtrl", function FreemancerCtrl($scope) {
   $scope.toggleHirebox = function() {
-    $scope.hirebox = ! $scope.hirebox;
+    $scope.hire = ! $scope.hire;
+  };
+
+  $scope.toggleWorkbox = function() {
+    $scope.work = ! $scope.work;
   };
 });

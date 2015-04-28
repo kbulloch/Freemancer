@@ -54,7 +54,7 @@
   box-shadow: 0px 5px 10px black;
 }
 
-.hire-box {
+.overlay-box {
   text-align: center;
   background-color: #EEE;
   height: 700px;
@@ -80,7 +80,16 @@
   margin: 40px;
 }
 
-.hire-overlay {
+#facemancer-btn {
+  margin-top: 30px;
+}
+
+#break-or {
+  margin: 30px 0;
+  font-style: italic;
+}
+
+.overlay {
   position: absolute;
   top: 72px;
   right: 0;
