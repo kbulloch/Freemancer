@@ -32,19 +32,33 @@ freemancer.directive("navbar", function() {
 });
 
 freemancer.controller("FreemancerCtrl", function FreemancerCtrl($scope) {
+
   $scope.toggleHirebox = function() {
     $scope.hire = ! $scope.hire;
+    $scope.signup = false;
+    $scope.work = false;
+    $scope.login = false;
   };
 
   $scope.toggleWorkbox = function() {
     $scope.work = ! $scope.work;
+    $scope.signup = false;
+    $scope.login = false;
+    $scope.hire = false;
   };
 
   $scope.toggleLoginbox = function() {
     $scope.login = ! $scope.login;
+    $scope.signup = false;
+    $scope.work = false;
+    $scope.hire = false;
   };
 
   $scope.toggleSignupbox = function() {
     $scope.signup = ! $scope.signup;
+    $scope.login = false;
+    $scope.work = false;
+    $scope.hire = false;
   };
+  
 });
