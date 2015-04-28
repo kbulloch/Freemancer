@@ -6,7 +6,8 @@
   <script src="lib/angular.js"></script>
   <script src="lib/angular-ui-router.js"></script>
   <script src="app.js"></script>
-  <link href="lib/bootstrap.css" rel="stylesheet">
+  <!-- <link href="lib/bootstrap.css" rel="stylesheet"> -->
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -14,6 +15,8 @@
   <div ui-view="jumbotron"></div>
   <div ui-view="hirebox" ng-show="hire" class="overlay"></div>
   <div ui-view="workbox" ng-show="work" class="overlay"></div>
+  <div ui-view="loginbox" ng-show="login" class="overlay"></div>
+  <div ui-view="signupbox" ng-show="signup" class="overlay"></div>
 
 </body>
 </html>

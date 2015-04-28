@@ -4,14 +4,20 @@ freemancer.config(function($stateProvider) {
   $stateProvider.state("main", {
     url: "",
     views: {
-      "workbox": {
-        templateUrl: "partials/workbox.html"
+      "jumbotron": {
+        templateUrl: "partials/jumbotron.html"
       },
       "hirebox": {
         templateUrl: "partials/hirebox.html"
       },
-      "jumbotron": {
-        templateUrl: "partials/jumbotron.html"
+      "workbox": {
+        templateUrl: "partials/workbox.html"
+      },
+      "loginbox": {
+        templateUrl: "partials/loginbox.html"
+      },
+      "signupbox": {
+        templateUrl: "partials/signupbox.html"
       }
     }
   });
@@ -20,7 +26,8 @@ freemancer.config(function($stateProvider) {
 freemancer.directive("navbar", function() {
   return {
     restrict: "E",
-    templateUrl: "partials/navigation.html"
+    templateUrl: "partials/navigation.html",
+    controller: "FreemancerCtrl"
   }
 });
 
@@ -31,5 +38,13 @@ freemancer.controller("FreemancerCtrl", function FreemancerCtrl($scope) {
 
   $scope.toggleWorkbox = function() {
     $scope.work = ! $scope.work;
+  };
+
+  $scope.toggleLoginbox = function() {
+    $scope.login = ! $scope.login;
+  };
+
+  $scope.toggleSignupbox = function() {
+    $scope.signup = ! $scope.signup;
   };
 });
